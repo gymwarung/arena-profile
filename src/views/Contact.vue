@@ -30,10 +30,10 @@
                             </div>
                         </div>
                         <h3 class="font-headline-md text-[10px] sm:text-[14px] lg:text-[12px] xl:text-[18px] uppercase text-white mt-1 mb-1 sm:mb-2 leading-tight">WHATSAPP OFFICIAL</h3>
-                        <p class="font-display-xl text-[9px] sm:text-[12px] lg:text-[10px] xl:text-[16px] text-brand-red mb-2 sm:mb-3 tracking-wider break-words leading-tight">0821-3006-6694</p>
+                        <p class="font-display-xl text-[9px] sm:text-[12px] lg:text-[10px] xl:text-[16px] text-brand-red mb-2 sm:mb-3 tracking-wider break-words leading-tight">0895-0836-6293</p>
                     </div>
                     <div class="space-y-3 pt-2 sm:pt-4 border-t border-white/10 mt-auto">
-                        <a href="https://wa.me/6282130066694?text=Halo%20Admin%20WARGYM%2C%20saya%20ingin%20tanya%20informasi%20membership%20dan%20fasilitas%20gym." target="_blank" class="btn-primary w-full text-center text-[9px] sm:text-[10px] xl:text-sm py-1.5 sm:py-2 xl:py-3 px-1 sm:px-2 xl:px-4 uppercase font-bold tracking-widest">LIHAT</a>
+                        <a href="https://wa.me/6289508366293?text=Halo%20Admin%20WARGYM%2C%20saya%20ingin%20tanya%20informasi%20membership%20dan%20fasilitas%20gym." target="_blank" class="btn-primary w-full text-center text-[9px] sm:text-[10px] xl:text-sm py-1.5 sm:py-2 xl:py-3 px-1 sm:px-2 xl:px-4 uppercase font-bold tracking-widest">LIHAT</a>
                     </div>
                 </div>
 
