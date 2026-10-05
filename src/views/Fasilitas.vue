@@ -63,7 +63,7 @@ const searchQuery = ref('')
 
 const facilities = [
     { name: 'Treadmill', qty: '3 Unit', category: 'cardio', img: 'https://images.unsplash.com/photo-1576678927484-cc907957088c?w=500&h=400&fit=crop' },
-    { name: 'Samsak / Sandsack', qty: '1 Unit', category: 'cardio', img: 'https://images.unsplash.com/photo-1555597673-b21d5c935865?w=500&h=400&fit=crop' },
+    { name: 'Samsak / Sandsack', qty: '1 Unit', category: 'cardio', img: '/images/samsak.png' },
     { name: 'Smith Machine', qty: '1 Unit', category: 'strength', img: 'https://images.unsplash.com/photo-1534258936925-c58bed479fcb?w=500&h=400&fit=crop' },
     { name: 'Chest Press', qty: '1 Unit', category: 'strength', img: 'https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=500&h=400&fit=crop' },
     { name: 'Leg Curl + Leg Ext + Triceps', qty: '1 Unit', category: 'strength', img: 'https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=500&h=400&fit=crop' },
@@ -78,10 +78,10 @@ const facilities = [
     { name: 'Tempat Pull Up', qty: '2 Unit', category: 'strength', img: 'https://images.unsplash.com/photo-1598971639058-fab3c3109a00?w=500&h=400&fit=crop' },
     { name: 'Bumper Plate (Deadlift)', qty: '5-20kg', category: 'strength', img: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=500&h=400&fit=crop' },
     { name: 'Kamar Mandi / Toilet', qty: '1 Unit', category: 'lainnya', img: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=500&h=400&fit=crop' },
-    { name: 'Tempat Sholat', qty: 'Tersedia', category: 'lainnya', img: 'https://images.unsplash.com/photo-1564769625905-50e93615e769?w=500&h=400&fit=crop' },
+    { name: 'Tempat Ibadah / Sholat', qty: 'Tersedia', category: 'lainnya', img: '/images/musholla.png' },
     { name: 'Free WiFi', qty: 'Tersedia', category: 'lainnya', img: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=500&h=400&fit=crop' },
-    { name: 'Sirkulasi Udara Lancar + Kipas Angin', qty: 'Tersedia', category: 'lainnya', img: 'https://images.unsplash.com/photo-1584824486509-112e4181ff6b?w=500&h=400&fit=crop' },
-    { name: 'Warung', qty: '1 Unit', category: 'lainnya', img: 'https://images.unsplash.com/photo-1521790797524-b2497295b8a0?w=500&h=400&fit=crop' },
+    { name: 'Sirkulasi Udara Lancar + Kipas Angin', qty: 'Tersedia', category: 'lainnya', img: '/images/kipas.png' },
+    { name: 'Warung', qty: '1 Unit', category: 'lainnya', img: '/images/warung.jpg' },
 ]
 
 const filteredFacilities = computed(() => {
