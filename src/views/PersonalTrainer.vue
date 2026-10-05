@@ -34,16 +34,8 @@
                     class="glass-panel p-6 sm:p-8 flex flex-col justify-between border border-white/10 hover:border-brand-red/70 transition-all duration-300 group cursor-pointer rounded-xl relative hover:shadow-[0_10px_35px_rgba(255,85,64,0.15)]"
                 >
                     <div>
-                        <!-- Header Badge & Name -->
+                        <!-- Header Name -->
                         <div class="mb-5 pb-5 border-b border-white/10">
-                            <div class="flex items-center justify-between mb-2">
-                                <span class="inline-block px-2.5 py-1 bg-brand-red text-black font-label-caps text-[10px] uppercase font-bold tracking-widest rounded">
-                                    {{ ghionData.age }} TAHUN • PT / COACH
-                                </span>
-                                <span class="material-symbols-outlined text-white/30 group-hover:text-brand-red transition-colors text-[24px]">
-                                    fitness_center
-                                </span>
-                            </div>
                             <h3 class="font-headline-md text-3xl sm:text-4xl text-white uppercase tracking-wider m-0 leading-tight group-hover:text-brand-red transition-colors">
                                 {{ ghionData.name }}
                             </h3>
@@ -82,16 +74,8 @@
                     class="glass-panel p-6 sm:p-8 flex flex-col justify-between border border-white/10 hover:border-brand-red/70 transition-all duration-300 group cursor-pointer rounded-xl relative hover:shadow-[0_10px_35px_rgba(255,85,64,0.15)]"
                 >
                     <div>
-                        <!-- Header Badge & Name -->
+                        <!-- Header Name -->
                         <div class="mb-5 pb-5 border-b border-white/10">
-                            <div class="flex items-center justify-between mb-2">
-                                <span class="inline-block px-2.5 py-1 bg-brand-red/10 border border-brand-red/30 text-brand-red font-label-caps text-[10px] uppercase font-bold tracking-widest rounded">
-                                    {{ fannyData.age }} TAHUN • PERSONAL TRAINER
-                                </span>
-                                <span class="material-symbols-outlined text-white/30 group-hover:text-brand-red transition-colors text-[24px]">
-                                    fitness_center
-                                </span>
-                            </div>
                             <h3 class="font-headline-md text-3xl sm:text-4xl text-white uppercase tracking-wider m-0 leading-tight group-hover:text-brand-red transition-colors">
                                 {{ fannyData.name }}
                             </h3>
