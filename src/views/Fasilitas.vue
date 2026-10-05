@@ -64,8 +64,8 @@ const searchQuery = ref('')
 const facilities = [
     { name: 'Treadmill', qty: '3 Unit', category: 'cardio', img: 'https://images.unsplash.com/photo-1576678927484-cc907957088c?w=500&h=400&fit=crop' },
     { name: 'Samsak / Sandsack', qty: '1 Unit', category: 'cardio', img: '/images/samsak.png' },
-    { name: 'Smith Machine', qty: '1 Unit', category: 'strength', img: 'https://images.unsplash.com/photo-1534258936925-c58bed479fcb?w=500&h=400&fit=crop' },
-    { name: 'Chest Press', qty: '1 Unit', category: 'strength', img: 'https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=500&h=400&fit=crop' },
+    { name: 'Smith Machine', qty: '1 Unit', category: 'strength', img: '/images/smith-machine.jpeg' },
+    { name: 'Chest Press', qty: '1 Unit', category: 'strength', img: '/images/chest-press.jpe' },
     { name: 'Leg Curl + Leg Ext + Triceps', qty: '1 Unit', category: 'strength', img: 'https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=500&h=400&fit=crop' },
     { name: 'LatPullDown + Seated Row', qty: '2 Unit', category: 'strength', img: 'https://images.unsplash.com/photo-1549060279-7e168fcee0c2?w=500&h=400&fit=crop' },
     { name: 'Flat Bench Press', qty: '1 Unit', category: 'strength', img: 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=500&h=400&fit=crop' },
