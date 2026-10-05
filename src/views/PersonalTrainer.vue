@@ -37,7 +37,7 @@
                         <!-- Header Name -->
                         <div class="mb-5 pb-5 border-b border-white/10">
                             <h3 class="font-headline-md text-3xl sm:text-4xl text-white uppercase tracking-wider m-0 leading-tight group-hover:text-brand-red transition-colors">
-                                {{ ghionData.name }}
+                                KAK {{ghionData.name }}
                             </h3>
                         </div>
 
@@ -77,7 +77,7 @@
                         <!-- Header Name -->
                         <div class="mb-5 pb-5 border-b border-white/10">
                             <h3 class="font-headline-md text-3xl sm:text-4xl text-white uppercase tracking-wider m-0 leading-tight group-hover:text-brand-red transition-colors">
-                                {{ fannyData.name }}
+                                KAK {{ fannyData.name }}
                             </h3>
                         </div>
 
@@ -393,7 +393,7 @@
                                     class="btn-primary inline-flex items-center gap-2 py-3 px-8 text-sm tracking-widest rounded-lg shadow-lg"
                                 >
                                     <span class="material-symbols-outlined text-[20px]">chat</span>
-                                    KONSULTASI DENGAN COACH GHION
+                                    HUBUNGI SEKARANG
                                 </a>
                             </div>
                         </div>
@@ -488,7 +488,7 @@
                                 class="btn-primary inline-flex items-center gap-2 py-3 px-8 text-xs sm:text-sm tracking-widest rounded-lg"
                             >
                                 <span class="material-symbols-outlined text-[18px]">chat</span>
-                                KONSULTASI VIA WHATSAPP
+                                HUBUNGI SEKARANG
                             </a>
                         </div>
                     </div>
