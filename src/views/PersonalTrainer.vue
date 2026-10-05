@@ -126,23 +126,18 @@
                     
                     <!-- Modal Header (Tanpa Foto) -->
                     <div class="sticky top-0 z-20 bg-[#161616]/95 backdrop-blur-md px-6 py-4 border-b border-white/10 flex items-center justify-between">
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-brand-red/10 border border-brand-red/40 flex items-center justify-center text-brand-red shrink-0">
-                                <span class="material-symbols-outlined text-[24px]">fitness_center</span>
+                        <div>
+                            <div class="flex items-center gap-2">
+                                <h3 class="font-headline-md text-lg sm:text-2xl text-white uppercase tracking-wider m-0">
+                                    {{ ghionData.name }}
+                                </h3>
+                                <span class="px-2 py-0.5 bg-brand-red text-black text-[10px] font-bold rounded uppercase">
+                                    {{ ghionData.age }} TAHUN
+                                </span>
                             </div>
-                            <div>
-                                <div class="flex items-center gap-2">
-                                    <h3 class="font-headline-md text-lg sm:text-2xl text-white uppercase tracking-wider m-0">
-                                        {{ ghionData.name }}
-                                    </h3>
-                                    <span class="px-2 py-0.5 bg-brand-red text-black text-[10px] font-bold rounded uppercase">
-                                        {{ ghionData.age }} TAHUN
-                                    </span>
-                                </div>
-                                <p class="text-xs text-brand-red font-medium">
-                                    Personal Trainer / Fitness Coach
-                                </p>
-                            </div>
+                            <p class="text-xs text-brand-red font-medium">
+                                Personal Trainer / Fitness Coach
+                            </p>
                         </div>
 
                         <!-- Close Button -->
@@ -410,22 +405,12 @@
                         <span class="text-xs text-on-surface-variant font-label-caps">
                             WARGYM MOJOSONGO • PERSONAL TRAINER
                         </span>
-                        <div class="flex items-center gap-3">
-                            <button 
-                                @click="closeModal" 
-                                class="px-4 py-2 rounded border border-white/20 text-white/80 hover:text-white hover:bg-white/10 text-xs uppercase font-headline-md tracking-wider transition-colors"
-                            >
-                                Tutup
-                            </button>
-                            <a 
-                                href="https://wa.me/6289508366293?text=Halo%20Coach%20Ghion%20WARGYM%2C%20saya%20tertarik%20untuk%20konsultasi%20program%20latihan%20Personal%20Trainer."
-                                target="_blank"
-                                class="px-5 py-2 rounded bg-brand-red text-black hover:bg-white text-xs uppercase font-headline-md tracking-wider font-bold transition-colors inline-flex items-center gap-1.5"
-                            >
-                                <span class="material-symbols-outlined text-[16px]">chat</span>
-                                WhatsApp
-                            </a>
-                        </div>
+                        <button 
+                            @click="closeModal" 
+                            class="px-5 py-2 rounded bg-white/10 hover:bg-white/20 text-white text-xs uppercase font-headline-md tracking-wider transition-colors"
+                        >
+                            Tutup
+                        </button>
                     </div>
 
                 </div>
@@ -447,21 +432,16 @@
                     
                     <!-- Modal Header (Tanpa Foto) -->
                     <div class="bg-[#161616]/95 backdrop-blur-md px-6 py-4 border-b border-white/10 flex items-center justify-between">
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-brand-red/10 border border-brand-red/40 flex items-center justify-center text-brand-red shrink-0">
-                                <span class="material-symbols-outlined text-[24px]">fitness_center</span>
+                        <div>
+                            <div class="flex items-center gap-2">
+                                <h3 class="font-headline-md text-xl sm:text-2xl text-white uppercase tracking-wider m-0">
+                                    {{ fannyData.name }}
+                                </h3>
+                                <span class="px-2 py-0.5 bg-brand-red text-black text-[10px] font-bold rounded uppercase">
+                                    {{ fannyData.age }} TAHUN
+                                </span>
                             </div>
-                            <div>
-                                <div class="flex items-center gap-2">
-                                    <h3 class="font-headline-md text-xl sm:text-2xl text-white uppercase tracking-wider m-0">
-                                        {{ fannyData.name }}
-                                    </h3>
-                                    <span class="px-2 py-0.5 bg-brand-red text-black text-[10px] font-bold rounded uppercase">
-                                        {{ fannyData.age }} TAHUN
-                                    </span>
-                                </div>
-                                <p class="text-xs text-brand-red font-medium">Personal Trainer / Fitness Coach</p>
-                            </div>
+                            <p class="text-xs text-brand-red font-medium">Personal Trainer / Fitness Coach</p>
                         </div>
 
                         <button 
