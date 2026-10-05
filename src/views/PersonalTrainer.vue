@@ -72,36 +72,36 @@
                     </div>
                 </div>
 
-                <!-- CARD DIKA -->
+                <!-- CARD FANNY -->
                 <div 
-                    @click="openModal('dika')" 
+                    @click="openModal('fanny')" 
                     class="glass-panel p-5 sm:p-6 flex flex-col border border-white/10 hover:border-brand-red/70 transition-all duration-300 group cursor-pointer rounded-xl relative hover:shadow-[0_10px_35px_rgba(255,85,64,0.15)]"
                 >
                     <!-- Image -->
                     <div class="overflow-hidden mb-5 border border-white/5 bg-white/5 relative rounded-lg">
-                        <img :src="dikaData.img" :alt="dikaData.name" class="w-full h-64 sm:h-80 object-cover group-hover:scale-105 transition-all duration-500">
+                        <img :src="fannyData.img" :alt="fannyData.name" class="w-full h-64 sm:h-80 object-cover group-hover:scale-105 transition-all duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
                         
                         <div class="absolute bottom-3 left-4 right-4">
                             <span class="inline-block px-2.5 py-1 bg-white/10 border border-white/20 text-white font-label-caps text-[10px] uppercase font-bold tracking-widest rounded mb-1.5">
-                                PERSONAL TRAINER
+                                {{ fannyData.age }} TAHUN • PERSONAL TRAINER
                             </span>
                             <h3 class="font-headline-md text-2xl sm:text-3xl text-white uppercase tracking-wider m-0 leading-tight">
-                                {{ dikaData.name }}
+                                {{ fannyData.name }}
                             </h3>
                         </div>
                     </div>
 
                     <!-- Spesialisasi Tags Preview -->
                     <div class="flex flex-wrap gap-1.5 mb-4">
-                        <span v-for="tag in dikaData.specialties" :key="tag" class="px-2 py-0.5 bg-white/5 border border-white/10 text-brand-red font-label-caps text-[10px] uppercase tracking-wider rounded">
+                        <span v-for="tag in fannyData.specialties" :key="tag" class="px-2 py-0.5 bg-white/5 border border-white/10 text-brand-red font-label-caps text-[10px] uppercase tracking-wider rounded">
                             {{ tag }}
                         </span>
                     </div>
 
                     <!-- Deskripsi Preview -->
                     <p class="font-body-md text-xs sm:text-sm leading-relaxed text-on-surface-variant flex-grow line-clamp-3">
-                        {{ dikaData.desc }}
+                        {{ fannyData.desc }}
                     </p>
 
                     <!-- CTA Action Button -->
@@ -442,12 +442,12 @@
     </Teleport>
 
     <!-- ========================================== -->
-    <!-- POPUP MODAL: PROFIL COACH DIKA             -->
+    <!-- POPUP MODAL: PROFIL COACH FANNY            -->
     <!-- ========================================== -->
     <Teleport to="body">
         <Transition name="modal-fade">
             <div 
-                v-if="activeModal === 'dika'" 
+                v-if="activeModal === 'fanny'" 
                 class="fixed inset-0 z-[999] flex items-center justify-center p-3 sm:p-6 bg-black/85 backdrop-blur-md"
                 @click.self="closeModal"
             >
@@ -457,12 +457,17 @@
                     <div class="bg-[#161616]/95 backdrop-blur-md px-6 py-4 border-b border-white/10 flex items-center justify-between">
                         <div class="flex items-center gap-3">
                             <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden border border-brand-red/50 shrink-0">
-                                <img :src="dikaData.img" :alt="dikaData.name" class="w-full h-full object-cover">
+                                <img :src="fannyData.img" :alt="fannyData.name" class="w-full h-full object-cover">
                             </div>
                             <div>
-                                <h3 class="font-headline-md text-xl sm:text-2xl text-white uppercase tracking-wider m-0">
-                                    {{ dikaData.name }}
-                                </h3>
+                                <div class="flex items-center gap-2">
+                                    <h3 class="font-headline-md text-xl sm:text-2xl text-white uppercase tracking-wider m-0">
+                                        {{ fannyData.name }}
+                                    </h3>
+                                    <span class="px-2 py-0.5 bg-brand-red text-black text-[10px] font-bold rounded uppercase">
+                                        {{ fannyData.age }} TAHUN
+                                    </span>
+                                </div>
                                 <p class="text-xs text-brand-red font-medium">Personal Trainer / Fitness Coach</p>
                             </div>
                         </div>
@@ -481,7 +486,7 @@
                         <div class="space-y-3">
                             <span class="font-label-caps text-brand-red text-xs uppercase tracking-widest block">SPESIALISASI PROGRAM</span>
                             <div class="flex flex-wrap gap-1.5">
-                                <span v-for="tag in dikaData.specialties" :key="tag" class="px-2.5 py-1 bg-brand-red/10 border border-brand-red/30 text-brand-red text-xs font-semibold rounded-full">
+                                <span v-for="tag in fannyData.specialties" :key="tag" class="px-2.5 py-1 bg-brand-red/10 border border-brand-red/30 text-brand-red text-xs font-semibold rounded-full">
                                     {{ tag }}
                                 </span>
                             </div>
@@ -489,22 +494,24 @@
 
                         <div class="space-y-3">
                             <h4 class="font-headline-md text-lg text-white uppercase tracking-wider">
-                                TENTANG PROGRAM COACH DIKA
+                                TENTANG PROFIL COACH FANNY
                             </h4>
+                            <div class="p-4 bg-white/5 border border-dashed border-white/20 rounded-xl">
+                                <p class="font-body-md text-sm sm:text-base leading-relaxed text-on-surface-variant italic">
+                                    "Deskripsi profil lengkap sedang dalam proses penyusunan dan akan segera diperbarui."
+                                </p>
+                            </div>
                             <p class="font-body-md text-sm sm:text-base leading-relaxed text-on-surface-variant">
-                                {{ dikaData.desc }}
-                            </p>
-                            <p class="font-body-md text-sm sm:text-base leading-relaxed text-on-surface-variant">
-                                Siap membantu Anda menyusun rencana latihan beban, peningkatan performa daya tahan fisik, stamina, teknik pukulan boxing untuk kebugaran, hingga panduan nutrisi harian yang tepat.
+                                Siap membantu dan mendampingi Anda dalam program latihan beban, pembentukan tubuh, peningkatan kebugaran fisik, serta panduan latihan terarah di WARGYM Mojosongo.
                             </p>
                         </div>
 
                         <div class="p-5 bg-white/5 border border-white/10 rounded-xl text-center space-y-3">
                             <p class="font-headline-md text-sm sm:text-base text-white">
-                                Mulai sesi latihan privat Anda bersama Coach Dika di WARGYM Mojosongo.
+                                Ingin konsultasi latihan privat bersama Coach Fanny?
                             </p>
                             <a 
-                                href="https://wa.me/6289508366293?text=Halo%20Admin%20WARGYM%2C%20saya%20tertarik%20konsultasi%20program%20latihan%20dengan%20Coach%20Dika."
+                                href="https://wa.me/6289508366293?text=Halo%20Admin%20WARGYM%2C%20saya%20tertarik%20konsultasi%20program%20latihan%20dengan%20Coach%20Fanny."
                                 target="_blank"
                                 class="btn-primary inline-flex items-center gap-2 py-3 px-8 text-xs sm:text-sm tracking-widest rounded-lg"
                             >
@@ -589,12 +596,14 @@ const ghionData = {
     ]
 }
 
-// Data Coach Dika
-const dikaData = {
-    name: 'DIKA',
+// Data Coach Fanny
+const fannyData = {
+    name: 'FANNY',
+    age: 26,
+    profession: 'Personal Trainer / Fitness Coach',
     img: 'https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=500&h=500&fit=crop',
-    specialties: ['Weight Management', 'Muscle Building', 'Fat Loss', 'Endurance', 'Boxing for Fitness', 'Mobility & Agility'],
-    desc: 'Weight Management, Muscle Building, Fat Loss, Endurance, Mobility and Agility, Boxing for Fitness, Postural Alignment, Strength, Functional Training, Nutrition Program.'
+    specialties: ['Personal Trainer', 'Fitness Coach', 'Muscle Building', 'Weight Management'],
+    desc: 'Deskripsi profil menyusul. Siap mendampingi dan memandu program latihan kebugaran, kekuatan, dan pembentukan tubuh Anda di WARGYM Mojosongo.'
 }
 </script>
 
