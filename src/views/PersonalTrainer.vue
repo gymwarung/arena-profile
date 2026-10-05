@@ -20,14 +20,14 @@
                 <p class="font-body-md text-on-surface-variant text-lg md:text-xl">Capai tujuan fitness lebih cepat dengan bimbingan personal trainer bersertifikasi internasional</p>
             </div>
 
-            <div class="grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-3 sm:gap-6">
-                <div v-for="trainer in trainers" :key="trainer.name" class="glass-panel p-2 sm:p-5 flex flex-col border border-white/10 hover:border-brand-red/60 transition-all duration-300 group">
-                    <div class="overflow-hidden mb-3 sm:mb-5 border border-white/5 bg-white/5 relative rounded-sm">
-                        <img :src="trainer.img" :alt="trainer.name" class="w-full h-24 sm:h-48 object-cover group-hover:scale-105 transition-all duration-500">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
+                <div v-for="trainer in trainers" :key="trainer.name" class="glass-panel p-4 sm:p-6 flex flex-col border border-white/10 hover:border-brand-red/60 transition-all duration-300 group">
+                    <div class="overflow-hidden mb-4 sm:mb-5 border border-white/5 bg-white/5 relative rounded-sm">
+                        <img :src="trainer.img" :alt="trainer.name" class="w-full h-56 sm:h-72 object-cover group-hover:scale-105 transition-all duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                        <h3 class="absolute bottom-1 sm:bottom-3 left-2 sm:left-4 font-headline-md text-sm sm:text-2xl text-white uppercase tracking-wider m-0">{{ trainer.name }}</h3>
+                        <h3 class="absolute bottom-2 sm:bottom-4 left-3 sm:left-5 font-headline-md text-xl sm:text-2xl text-white uppercase tracking-wider m-0">{{ trainer.name }}</h3>
                     </div>
-                    <p class="font-body-md text-[9px] sm:text-[13px] leading-snug sm:leading-relaxed text-on-surface-variant flex-grow line-clamp-4 sm:line-clamp-none">{{ trainer.desc }}</p>
+                    <p class="font-body-md text-sm sm:text-base leading-relaxed text-on-surface-variant flex-grow">{{ trainer.desc }}</p>
                 </div>
             </div>
         </div>
@@ -37,11 +37,7 @@
 
 <script setup>
 const trainers = [
-    { name: 'HAPPY', desc: 'Weight Management, Fat Loss, Muscle Building, Nutrition, Functional Training, Freestyle Movement, Postural Alignment.', img: 'https://images.unsplash.com/photo-1594381898411-846e7d193883?w=300&h=300&fit=crop' },
-    { name: 'DIKA', desc: 'Weight Management, Muscle Building, Fat Loss, Endurance, Mobility and Agility, Boxing for Fitness, Postural Alignment, Strength, Functional Training, Nutrition Program.', img: 'https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=300&h=300&fit=crop' },
-    { name: 'IMAM', desc: 'Weight Management, Fat Loss, Muscle Building, Nutrition, Functional Training, Freestyle Movement, Postural Alignment, Strength, Power.', img: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=300&h=300&fit=crop' },
-    { name: 'JASEP', desc: 'Weight Management, Muscle Building, Rehab, Postural Alignment, Freestyle Movement.', img: 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=300&h=300&fit=crop' },
-    { name: 'INDAH', desc: 'Weight Management, Muscle Building, Core Building, Endurance, Mobility and Agility, Freestyle Movement, Postural Alignment, Strength, Power, Sport Performance.', img: 'https://images.unsplash.com/photo-1607962837359-5e7e8f566408?w=300&h=300&fit=crop' },
-    { name: 'ABDUL', desc: 'Weight Management, Muscle Building, Fat Loss, Endurance, Mobility and Agility, Boxing for Fitness, Postural Alignment, Strength, Functional Training, Nutrition Program.', img: 'https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=300&h=300&fit=crop' },
+    { name: 'HAPPY', desc: 'Weight Management, Fat Loss, Muscle Building, Nutrition, Functional Training, Freestyle Movement, Postural Alignment.', img: 'https://images.unsplash.com/photo-1594381898411-846e7d193883?w=500&h=500&fit=crop' },
+    { name: 'DIKA', desc: 'Weight Management, Muscle Building, Fat Loss, Endurance, Mobility and Agility, Boxing for Fitness, Postural Alignment, Strength, Functional Training, Nutrition Program.', img: 'https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=500&h=500&fit=crop' },
 ]
 </script>
