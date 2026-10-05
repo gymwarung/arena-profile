@@ -28,40 +28,44 @@
             <!-- Cards Grid -->
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-4xl mx-auto">
                 
-                <!-- CARD GHION -->
+                <!-- CARD GHION (TEXT ONLY) -->
                 <div 
                     @click="openModal('ghion')" 
-                    class="glass-panel p-5 sm:p-6 flex flex-col border border-white/10 hover:border-brand-red/70 transition-all duration-300 group cursor-pointer rounded-xl relative hover:shadow-[0_10px_35px_rgba(255,85,64,0.15)]"
+                    class="glass-panel p-6 sm:p-8 flex flex-col justify-between border border-white/10 hover:border-brand-red/70 transition-all duration-300 group cursor-pointer rounded-xl relative hover:shadow-[0_10px_35px_rgba(255,85,64,0.15)]"
                 >
-                    <!-- Image -->
-                    <div class="overflow-hidden mb-5 border border-white/5 bg-white/5 relative rounded-lg">
-                        <img :src="ghionData.img" :alt="ghionData.name" class="w-full h-64 sm:h-80 object-cover group-hover:scale-105 transition-all duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
-                        
-                        <div class="absolute bottom-3 left-4 right-4">
-                            <span class="inline-block px-2.5 py-1 bg-brand-red text-black font-label-caps text-[10px] uppercase font-bold tracking-widest rounded mb-1.5">
-                                {{ ghionData.age }} TAHUN • PT / COACH
-                            </span>
-                            <h3 class="font-headline-md text-2xl sm:text-3xl text-white uppercase tracking-wider m-0 leading-tight">
+                    <div>
+                        <!-- Header Badge & Name -->
+                        <div class="mb-5 pb-5 border-b border-white/10">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="inline-block px-2.5 py-1 bg-brand-red text-black font-label-caps text-[10px] uppercase font-bold tracking-widest rounded">
+                                    {{ ghionData.age }} TAHUN • PT / COACH
+                                </span>
+                                <span class="material-symbols-outlined text-white/30 group-hover:text-brand-red transition-colors text-[24px]">
+                                    fitness_center
+                                </span>
+                            </div>
+                            <h3 class="font-headline-md text-3xl sm:text-4xl text-white uppercase tracking-wider m-0 leading-tight group-hover:text-brand-red transition-colors">
                                 {{ ghionData.name }}
                             </h3>
                         </div>
-                    </div>
 
-                    <!-- Spesialisasi Tags Preview -->
-                    <div class="flex flex-wrap gap-1.5 mb-4">
-                        <span v-for="tag in ghionData.specialties" :key="tag" class="px-2 py-0.5 bg-white/5 border border-white/10 text-brand-red font-label-caps text-[10px] uppercase tracking-wider rounded">
-                            {{ tag }}
-                        </span>
-                    </div>
+                        <!-- Spesialisasi Tags Preview -->
+                        <div class="flex flex-wrap gap-1.5 mb-5">
+                            <span v-for="tag in ghionData.specialties" :key="tag" class="px-2.5 py-1 bg-white/5 border border-white/10 text-brand-red font-label-caps text-[10px] uppercase tracking-wider rounded">
+                                {{ tag }}
+                            </span>
+                        </div>
 
-                    <!-- Deskripsi Preview -->
-                    <p class="font-body-md text-xs sm:text-sm leading-relaxed text-on-surface-variant flex-grow line-clamp-3">
-                        {{ ghionData.previewDesc }}
-                    </p>
+                        <!-- Deskripsi Preview -->
+                        <div class="p-4 bg-white/5 rounded-lg border border-white/5 mb-4">
+                            <p class="font-body-md text-xs sm:text-sm leading-relaxed text-on-surface-variant line-clamp-3">
+                                {{ ghionData.previewDesc }}
+                            </p>
+                        </div>
+                    </div>
 
                     <!-- CTA Action Button -->
-                    <div class="mt-5 pt-4 border-t border-white/10 flex items-center justify-between text-brand-red group-hover:text-white transition-colors">
+                    <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-brand-red group-hover:text-white transition-colors">
                         <span class="font-headline-md text-xs sm:text-sm tracking-wider uppercase flex items-center gap-1.5">
                             <span class="material-symbols-outlined text-[18px]">visibility</span>
                             Buka Profil Lengkap
@@ -72,40 +76,44 @@
                     </div>
                 </div>
 
-                <!-- CARD FANNY -->
+                <!-- CARD FANNY (TEXT ONLY) -->
                 <div 
                     @click="openModal('fanny')" 
-                    class="glass-panel p-5 sm:p-6 flex flex-col border border-white/10 hover:border-brand-red/70 transition-all duration-300 group cursor-pointer rounded-xl relative hover:shadow-[0_10px_35px_rgba(255,85,64,0.15)]"
+                    class="glass-panel p-6 sm:p-8 flex flex-col justify-between border border-white/10 hover:border-brand-red/70 transition-all duration-300 group cursor-pointer rounded-xl relative hover:shadow-[0_10px_35px_rgba(255,85,64,0.15)]"
                 >
-                    <!-- Image -->
-                    <div class="overflow-hidden mb-5 border border-white/5 bg-white/5 relative rounded-lg">
-                        <img :src="fannyData.img" :alt="fannyData.name" class="w-full h-64 sm:h-80 object-cover group-hover:scale-105 transition-all duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
-                        
-                        <div class="absolute bottom-3 left-4 right-4">
-                            <span class="inline-block px-2.5 py-1 bg-white/10 border border-white/20 text-white font-label-caps text-[10px] uppercase font-bold tracking-widest rounded mb-1.5">
-                                {{ fannyData.age }} TAHUN • PERSONAL TRAINER
-                            </span>
-                            <h3 class="font-headline-md text-2xl sm:text-3xl text-white uppercase tracking-wider m-0 leading-tight">
+                    <div>
+                        <!-- Header Badge & Name -->
+                        <div class="mb-5 pb-5 border-b border-white/10">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="inline-block px-2.5 py-1 bg-brand-red/10 border border-brand-red/30 text-brand-red font-label-caps text-[10px] uppercase font-bold tracking-widest rounded">
+                                    {{ fannyData.age }} TAHUN • PERSONAL TRAINER
+                                </span>
+                                <span class="material-symbols-outlined text-white/30 group-hover:text-brand-red transition-colors text-[24px]">
+                                    fitness_center
+                                </span>
+                            </div>
+                            <h3 class="font-headline-md text-3xl sm:text-4xl text-white uppercase tracking-wider m-0 leading-tight group-hover:text-brand-red transition-colors">
                                 {{ fannyData.name }}
                             </h3>
                         </div>
-                    </div>
 
-                    <!-- Spesialisasi Tags Preview -->
-                    <div class="flex flex-wrap gap-1.5 mb-4">
-                        <span v-for="tag in fannyData.specialties" :key="tag" class="px-2 py-0.5 bg-white/5 border border-white/10 text-brand-red font-label-caps text-[10px] uppercase tracking-wider rounded">
-                            {{ tag }}
-                        </span>
-                    </div>
+                        <!-- Spesialisasi Tags Preview -->
+                        <div class="flex flex-wrap gap-1.5 mb-5">
+                            <span v-for="tag in fannyData.specialties" :key="tag" class="px-2.5 py-1 bg-white/5 border border-white/10 text-white/80 font-label-caps text-[10px] uppercase tracking-wider rounded">
+                                {{ tag }}
+                            </span>
+                        </div>
 
-                    <!-- Deskripsi Preview -->
-                    <p class="font-body-md text-xs sm:text-sm leading-relaxed text-on-surface-variant flex-grow line-clamp-3">
-                        {{ fannyData.desc }}
-                    </p>
+                        <!-- Deskripsi Preview -->
+                        <div class="p-4 bg-white/5 rounded-lg border border-white/5 mb-4">
+                            <p class="font-body-md text-xs sm:text-sm leading-relaxed text-on-surface-variant italic">
+                                "{{ fannyData.desc }}"
+                            </p>
+                        </div>
+                    </div>
 
                     <!-- CTA Action Button -->
-                    <div class="mt-5 pt-4 border-t border-white/10 flex items-center justify-between text-brand-red group-hover:text-white transition-colors">
+                    <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-brand-red group-hover:text-white transition-colors">
                         <span class="font-headline-md text-xs sm:text-sm tracking-wider uppercase flex items-center gap-1.5">
                             <span class="material-symbols-outlined text-[18px]">visibility</span>
                             Buka Profil Lengkap
@@ -132,11 +140,11 @@
             >
                 <div class="relative w-full max-w-4xl max-h-[92vh] bg-[#141414] border border-white/15 rounded-2xl shadow-[0_0_60px_rgba(255,85,64,0.18)] flex flex-col overflow-hidden text-left animate-in fade-in zoom-in-95 duration-200">
                     
-                    <!-- Modal Header (Sticky) -->
+                    <!-- Modal Header (Tanpa Foto) -->
                     <div class="sticky top-0 z-20 bg-[#161616]/95 backdrop-blur-md px-6 py-4 border-b border-white/10 flex items-center justify-between">
                         <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden border border-brand-red/50 shrink-0">
-                                <img :src="ghionData.img" :alt="ghionData.name" class="w-full h-full object-cover">
+                            <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-brand-red/10 border border-brand-red/40 flex items-center justify-center text-brand-red shrink-0">
+                                <span class="material-symbols-outlined text-[24px]">fitness_center</span>
                             </div>
                             <div>
                                 <div class="flex items-center gap-2">
@@ -453,11 +461,11 @@
             >
                 <div class="relative w-full max-w-2xl max-h-[92vh] bg-[#141414] border border-white/15 rounded-2xl shadow-[0_0_60px_rgba(255,85,64,0.18)] flex flex-col overflow-hidden text-left animate-in fade-in zoom-in-95 duration-200">
                     
-                    <!-- Modal Header -->
+                    <!-- Modal Header (Tanpa Foto) -->
                     <div class="bg-[#161616]/95 backdrop-blur-md px-6 py-4 border-b border-white/10 flex items-center justify-between">
                         <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden border border-brand-red/50 shrink-0">
-                                <img :src="fannyData.img" :alt="fannyData.name" class="w-full h-full object-cover">
+                            <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-brand-red/10 border border-brand-red/40 flex items-center justify-center text-brand-red shrink-0">
+                                <span class="material-symbols-outlined text-[24px]">fitness_center</span>
                             </div>
                             <div>
                                 <div class="flex items-center gap-2">
@@ -580,7 +588,6 @@ const ghionData = {
     name: 'GHION',
     age: 32,
     profession: 'Personal Trainer / Fitness Coach',
-    img: 'https://images.unsplash.com/photo-1594381898411-846e7d193883?w=500&h=500&fit=crop',
     specialties: ['Longevity', 'Healthy Aging', 'Fitness', 'Fat Loss', 'Muscle Building'],
     previewDesc: 'Personal Trainer yang berfokus pada kebugaran, kesehatan, pengelolaan berat badan, massa otot, serta longevity—membangun tubuh yang kuat dan sehat untuk kualitas hidup jangka panjang.',
     approachPoints: [
@@ -601,7 +608,6 @@ const fannyData = {
     name: 'FANNY',
     age: 26,
     profession: 'Personal Trainer / Fitness Coach',
-    img: 'https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=500&h=500&fit=crop',
     specialties: ['Personal Trainer', 'Fitness Coach', 'Muscle Building', 'Weight Management'],
     desc: 'Deskripsi profil menyusul. Siap mendampingi dan memandu program latihan kebugaran, kekuatan, dan pembentukan tubuh Anda di WARGYM Mojosongo.'
 }
