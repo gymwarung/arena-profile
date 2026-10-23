@@ -26,7 +26,7 @@
             </div>
 
             <!-- Cards Grid -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
                 
                 <!-- CARD GHION (TEXT ONLY) -->
                 <div 
@@ -92,6 +92,46 @@
                         <div class="p-4 bg-white/5 rounded-lg border border-white/5 mb-4">
                             <p class="font-body-md text-xs sm:text-sm leading-relaxed text-on-surface-variant line-clamp-3">
                                 {{ fannyData.previewAboutMe }}
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- CTA Action Button -->
+                    <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-brand-red group-hover:text-white transition-colors">
+                        <span class="font-headline-md text-xs sm:text-sm tracking-wider uppercase flex items-center gap-1.5">
+                            <span class="material-symbols-outlined text-[18px]">visibility</span>
+                            Buka Profil Lengkap
+                        </span>
+                        <span class="material-symbols-outlined text-[18px] transform group-hover:translate-x-1 transition-transform">
+                            arrow_forward
+                        </span>
+                    </div>
+                </div>
+
+                <!-- CARD IZAA (TEXT ONLY) -->
+                <div 
+                    @click="openModal('izaa')" 
+                    class="glass-panel p-6 sm:p-8 flex flex-col justify-between border border-white/10 hover:border-brand-red/70 transition-all duration-300 group cursor-pointer rounded-xl relative hover:shadow-[0_10px_35px_rgba(255,85,64,0.15)]"
+                >
+                    <div>
+                        <!-- Header Name -->
+                        <div class="mb-5 pb-5 border-b border-white/10">
+                            <h3 class="font-headline-md text-3xl sm:text-4xl text-white uppercase tracking-wider m-0 leading-tight group-hover:text-brand-red transition-colors">
+                                KAK {{ izaaData.name }}
+                            </h3>
+                        </div>
+
+                        <!-- Spesialisasi Tags Preview -->
+                        <div class="flex flex-wrap gap-1.5 mb-5">
+                            <span v-for="tag in izaaData.specialties" :key="tag" class="px-2.5 py-1 bg-white/5 border border-white/10 text-brand-red font-label-caps text-[10px] uppercase tracking-wider rounded">
+                                {{ tag }}
+                            </span>
+                        </div>
+
+                        <!-- Deskripsi Preview -->
+                        <div class="p-4 bg-white/5 rounded-lg border border-white/5 mb-4">
+                            <p class="font-body-md text-xs sm:text-sm leading-relaxed text-on-surface-variant line-clamp-3">
+                                {{ izaaData.previewDesc }}
                             </p>
                         </div>
                     </div>
@@ -585,6 +625,192 @@
         </Transition>
     </Teleport>
 
+    <!-- ========================================== -->
+    <!-- POPUP MODAL: PROFIL COACH IZAA             -->
+    <!-- ========================================== -->
+    <Teleport to="body">
+        <Transition name="modal-fade">
+            <div 
+                v-if="activeModal === 'izaa'" 
+                class="fixed inset-0 z-[999] flex items-center justify-center p-3 sm:p-6 bg-black/85 backdrop-blur-md"
+                @click.self="closeModal"
+            >
+                <div class="relative w-full max-w-3xl max-h-[92vh] bg-[#141414] border border-white/15 rounded-2xl shadow-[0_0_60px_rgba(255,85,64,0.18)] flex flex-col overflow-hidden text-left animate-in fade-in zoom-in-95 duration-200">
+                    
+                    <!-- Modal Header -->
+                    <div class="sticky top-0 z-20 bg-[#161616]/95 backdrop-blur-md px-6 py-4 border-b border-white/10 flex items-center justify-between">
+                        <div>
+                            <div class="flex items-center gap-2">
+                                <h3 class="font-headline-md text-xl sm:text-2xl text-white uppercase tracking-wider m-0">
+                                    KAK {{ izaaData.name }}
+                                </h3>
+                                <span class="px-2 py-0.5 bg-brand-red text-black text-[10px] font-bold rounded uppercase">
+                                    PERSONAL TRAINER
+                                </span>
+                            </div>
+                            <p class="text-xs text-brand-red font-medium">
+                                {{ izaaData.profession }}
+                            </p>
+                        </div>
+
+                        <button 
+                            @click="closeModal" 
+                            class="p-2 rounded-full bg-white/5 hover:bg-brand-red hover:text-black text-white/70 transition-colors flex items-center justify-center"
+                            title="Tutup (Esc)"
+                        >
+                            <span class="material-symbols-outlined text-[20px]">close</span>
+                        </button>
+                    </div>
+
+                    <!-- Modal Body (Scrollable) -->
+                    <div class="overflow-y-auto custom-scrollbar p-6 sm:p-8 space-y-8 text-on-surface">
+                        
+                        <!-- Top Summary Badge -->
+                        <div class="bg-white/5 border border-white/10 p-4 rounded-xl flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                            <div>
+                                <span class="font-label-caps text-brand-red text-[10px] uppercase tracking-widest block mb-1">PROFIL PELATIH GYM</span>
+                                <h4 class="font-headline-md text-white text-base sm:text-lg uppercase">
+                                    WARGYM PERSONAL TRAINER
+                                </h4>
+                            </div>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span v-for="tag in izaaData.specialties" :key="tag" class="px-2.5 py-1 bg-brand-red/10 border border-brand-red/30 text-brand-red text-xs font-semibold rounded-full">
+                                    {{ tag }}
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- 1. TENTANG SAYA -->
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-2 border-b border-white/10 pb-2">
+                                <span class="material-symbols-outlined text-brand-red text-[20px]">person</span>
+                                <h4 class="font-headline-md text-xl text-white uppercase tracking-wider">
+                                    🌸 TENTANG SAYA
+                                </h4>
+                            </div>
+                            <p v-for="(p, idx) in izaaData.aboutMe" :key="idx" class="font-body-md text-sm sm:text-base leading-relaxed text-on-surface-variant">
+                                {{ p }}
+                            </p>
+                        </div>
+
+                        <!-- 2. SPESIALISASI -->
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-2 border-b border-white/10 pb-2">
+                                <span class="material-symbols-outlined text-brand-red text-[20px]">military_tech</span>
+                                <h4 class="font-headline-md text-xl text-white uppercase tracking-wider">
+                                    💪 SPESIALISASI
+                                </h4>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div 
+                                    v-for="item in izaaData.detailedSpecialties" 
+                                    :key="item.title"
+                                    class="bg-white/5 border border-white/10 p-4 rounded-xl space-y-1.5 hover:border-brand-red/50 transition-colors"
+                                >
+                                    <h5 class="font-headline-md text-base text-white uppercase flex items-center gap-2">
+                                        <span>{{ item.icon }}</span> {{ item.title }}
+                                    </h5>
+                                    <p class="font-body-md text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                                        {{ item.desc }}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 3. PENDEKATAN LATIHAN -->
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-2 border-b border-white/10 pb-2">
+                                <span class="material-symbols-outlined text-brand-red text-[20px]">tune</span>
+                                <h4 class="font-headline-md text-xl text-white uppercase tracking-wider">
+                                    PENDEKATAN LATIHAN
+                                </h4>
+                            </div>
+
+                            <p class="font-body-md text-sm sm:text-base text-on-surface-variant leading-relaxed">
+                                {{ izaaData.approachDesc }}
+                            </p>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                                <div v-for="point in izaaData.approachPoints" :key="point" class="flex items-center gap-2.5 p-2.5 bg-white/5 rounded-lg border border-white/5">
+                                    <span class="text-brand-red font-bold">&check;</span>
+                                    <span class="text-xs sm:text-sm text-white/90">{{ point }}</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 4. FILOSOFI LATIHAN -->
+                        <div class="bg-gradient-to-br from-[#1d1414] to-[#121212] border border-brand-red/30 p-5 sm:p-6 rounded-xl space-y-3">
+                            <div class="flex items-center gap-2 text-brand-red">
+                                <span class="material-symbols-outlined text-[22px]">format_quote</span>
+                                <span class="font-label-caps text-xs uppercase tracking-widest text-brand-red font-bold">FILOSOFI LATIHAN</span>
+                            </div>
+                            <blockquote class="p-3.5 bg-brand-red/10 border-l-4 border-brand-red rounded-r-lg">
+                                <p class="font-headline-md text-base sm:text-lg text-white italic tracking-wide">
+                                    "{{ izaaData.quote }}"
+                                </p>
+                            </blockquote>
+                            <p class="font-body-md text-xs sm:text-sm text-white/80 leading-relaxed pt-1">
+                                {{ izaaData.quoteSub }}
+                            </p>
+                        </div>
+
+                        <!-- 5. VISI -->
+                        <div class="bg-white/5 border border-white/10 p-5 sm:p-6 rounded-xl space-y-3">
+                            <span class="font-label-caps text-brand-red text-xs uppercase tracking-widest block">VISI COACH</span>
+                            <h4 class="font-headline-md text-base sm:text-lg text-white uppercase tracking-wide">
+                                "{{ izaaData.vision }}"
+                            </h4>
+                            <div class="flex flex-wrap gap-2 pt-2">
+                                <span v-for="motto in izaaData.mottos" :key="motto" class="px-3 py-1 bg-white/10 text-white font-headline-md text-xs sm:text-sm tracking-wider uppercase rounded">
+                                    {{ motto }}
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- 6. SLOGAN & CTA BANNER -->
+                        <div class="bg-gradient-to-r from-brand-red/20 via-black to-brand-red/20 border border-brand-red/40 p-6 rounded-2xl text-center space-y-3">
+                            <p class="font-headline-md text-base sm:text-lg text-brand-red italic tracking-wider font-semibold">
+                                🌸 {{ izaaData.slogan }}
+                            </p>
+                            <h3 class="font-headline-lg text-xl sm:text-2xl text-white uppercase tracking-widest drop-shadow">
+                                MULAI PROGRAM LATIHANMU
+                            </h3>
+                            <p class="text-xs sm:text-sm text-on-surface-variant max-w-md mx-auto">
+                                Siap membantu dan mendampingi Anda latihan yang aman, nyaman, dan bertahap di WARGYM Mojosongo.
+                            </p>
+                            <div class="pt-2">
+                                <a 
+                                    href="https://wa.me/6289508366293?text=Halo%20Kak%20Izaa%20WARGYM%2C%20saya%20tertarik%20untuk%20konsultasi%20program%20latihan%20Personal%20Trainer."
+                                    target="_blank"
+                                    class="btn-primary inline-flex items-center gap-2 py-3 px-8 text-xs sm:text-sm tracking-widest rounded-lg shadow-lg"
+                                >
+                                    <span class="material-symbols-outlined text-[18px]">chat</span>
+                                    KONSULTASI DENGAN KAK IZAA
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Modal Footer -->
+                    <div class="sticky bottom-0 z-20 bg-[#161616]/95 backdrop-blur-md px-6 py-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-3">
+                        <span class="text-xs text-on-surface-variant font-label-caps">
+                            WARGYM MOJOSONGO &bull; PERSONAL TRAINER
+                        </span>
+                        <button 
+                            @click="closeModal" 
+                            class="px-5 py-2 rounded bg-white/10 hover:bg-white/20 text-white text-xs uppercase font-headline-md tracking-wider transition-colors"
+                        >
+                            Tutup
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </Transition>
+    </Teleport>
+
 </main>
 </template>
 
@@ -668,6 +894,53 @@ const fannyData = {
         'Pendekatan Realistis & Bertahap',
         'Latihan Ramah Pemula & Bebas Intimidasi'
     ]
+}
+
+// Data Coach Izaa
+const izaaData = {
+    name: 'IZAA',
+    fullName: 'Kak Izaa',
+    profession: 'Personal Trainer / Fitness Coach',
+    specialties: ['Weight Loss', 'Body Shaping', 'Healthy Lifestyle', 'Fitness'],
+    previewDesc: 'Personal Trainer yang berdedikasi membantu Anda memiliki tubuh lebih sehat, bugar, dan percaya diri melalui latihan yang aman, bertahap, dan sesuai kemampuan.',
+    aboutMe: [
+        'Saya adalah seorang Personal Trainer yang memiliki minat dalam dunia olahraga dan kebugaran. Saya ingin membantu orang lain memiliki tubuh yang lebih sehat, bugar, dan percaya diri melalui latihan yang sesuai dengan kemampuan masing-masing.',
+        'Bagi saya, fitness bukan hanya tentang memiliki bentuk tubuh yang ideal, tetapi juga tentang menjaga kesehatan, meningkatkan kekuatan, dan membangun kebiasaan hidup sehat.'
+    ],
+    detailedSpecialties: [
+        {
+            icon: '🔥',
+            title: 'Weight Loss (Menurunkan Berat Badan)',
+            desc: 'Membantu mengurangi berat badan dan lemak tubuh melalui latihan yang teratur serta pola hidup sehat.'
+        },
+        {
+            icon: '🌸',
+            title: 'Body Shaping (Membentuk Tubuh)',
+            desc: 'Membantu membentuk tubuh agar lebih kencang, kuat, dan proporsional sesuai dengan tujuan masing-masing.'
+        },
+        {
+            icon: '🏋️',
+            title: 'Fitness & Strength Training',
+            desc: 'Membantu meningkatkan kekuatan otot, stamina, dan kebugaran tubuh melalui latihan yang dilakukan secara bertahap.'
+        },
+        {
+            icon: '❤️',
+            title: 'Healthy Lifestyle (Pola Hidup Sehat)',
+            desc: 'Membantu membangun kebiasaan hidup sehat melalui olahraga rutin, istirahat cukup, dan pola makan yang seimbang.'
+        }
+    ],
+    approachDesc: 'Saya percaya bahwa setiap orang memiliki kondisi tubuh dan kemampuan yang berbeda. Oleh karena itu, latihan perlu disesuaikan dengan kebutuhan dan tujuan masing-masing. Saya mengutamakan latihan yang aman, nyaman, bertahap, dan konsisten agar hasilnya dapat dirasakan dalam jangka panjang.',
+    approachPoints: [
+        'Latihan aman & bebas cedera',
+        'Nyaman & sesuai kemampuan individu',
+        'Progres bertahap & terukur',
+        'Konsisten untuk jangka panjang'
+    ],
+    quote: 'Olahraga bukan hanya tentang memiliki tubuh yang ideal, tetapi juga tentang mencintai diri sendiri dengan menjaga kesehatan dan kebugaran tubuh.',
+    quoteSub: 'Saya percaya bahwa perubahan kecil yang dilakukan secara konsisten dapat memberikan hasil yang baik bagi tubuh dan kesehatan.',
+    vision: 'Membantu orang lain menjadi lebih sehat, aktif, kuat, dan percaya diri melalui olahraga serta kebiasaan hidup sehat.',
+    mottos: ['Stay Healthy.', 'Stay Strong.', 'Be Confident.'],
+    slogan: 'STRONG BODY, HEALTHY LIFE.'
 }
 </script>
 
