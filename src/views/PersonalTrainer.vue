@@ -77,21 +77,21 @@
                         <!-- Header Name -->
                         <div class="mb-5 pb-5 border-b border-white/10">
                             <h3 class="font-headline-md text-3xl sm:text-4xl text-white uppercase tracking-wider m-0 leading-tight group-hover:text-brand-red transition-colors">
-                                KAK {{ fannyData.name }}
+                                COACH {{ fannyData.name }}
                             </h3>
                         </div>
 
                         <!-- Spesialisasi Tags Preview -->
                         <div class="flex flex-wrap gap-1.5 mb-5">
-                            <span v-for="tag in fannyData.specialties" :key="tag" class="px-2.5 py-1 bg-white/5 border border-white/10 text-white/80 font-label-caps text-[10px] uppercase tracking-wider rounded">
+                            <span v-for="tag in fannyData.specialties" :key="tag" class="px-2.5 py-1 bg-white/5 border border-white/10 text-brand-red font-label-caps text-[10px] uppercase tracking-wider rounded">
                                 {{ tag }}
                             </span>
                         </div>
 
                         <!-- Deskripsi Preview -->
                         <div class="p-4 bg-white/5 rounded-lg border border-white/5 mb-4">
-                            <p class="font-body-md text-xs sm:text-sm leading-relaxed text-on-surface-variant italic">
-                                "{{ fannyData.desc }}"
+                            <p class="font-body-md text-xs sm:text-sm leading-relaxed text-on-surface-variant line-clamp-3">
+                                {{ fannyData.previewAboutMe }}
                             </p>
                         </div>
                     </div>
@@ -428,20 +428,22 @@
                 class="fixed inset-0 z-[999] flex items-center justify-center p-3 sm:p-6 bg-black/85 backdrop-blur-md"
                 @click.self="closeModal"
             >
-                <div class="relative w-full max-w-2xl max-h-[92vh] bg-[#141414] border border-white/15 rounded-2xl shadow-[0_0_60px_rgba(255,85,64,0.18)] flex flex-col overflow-hidden text-left animate-in fade-in zoom-in-95 duration-200">
+                <div class="relative w-full max-w-3xl max-h-[92vh] bg-[#141414] border border-white/15 rounded-2xl shadow-[0_0_60px_rgba(255,85,64,0.18)] flex flex-col overflow-hidden text-left animate-in fade-in zoom-in-95 duration-200">
                     
                     <!-- Modal Header (Tanpa Foto) -->
-                    <div class="bg-[#161616]/95 backdrop-blur-md px-6 py-4 border-b border-white/10 flex items-center justify-between">
+                    <div class="sticky top-0 z-20 bg-[#161616]/95 backdrop-blur-md px-6 py-4 border-b border-white/10 flex items-center justify-between">
                         <div>
                             <div class="flex items-center gap-2">
                                 <h3 class="font-headline-md text-xl sm:text-2xl text-white uppercase tracking-wider m-0">
-                                    {{ fannyData.name }}
+                                    COACH {{ fannyData.name }}
                                 </h3>
                                 <span class="px-2 py-0.5 bg-brand-red text-black text-[10px] font-bold rounded uppercase">
-                                    {{ fannyData.age }} TAHUN
+                                    WOMEN TRAINER
                                 </span>
                             </div>
-                            <p class="text-xs text-brand-red font-medium">Personal Trainer / Fitness Coach</p>
+                            <p class="text-xs text-brand-red font-medium">
+                                {{ fannyData.role }} &bull; {{ fannyData.tagline }}
+                            </p>
                         </div>
 
                         <button 
@@ -455,8 +457,14 @@
 
                     <!-- Modal Body -->
                     <div class="overflow-y-auto custom-scrollbar p-6 sm:p-8 space-y-6 text-on-surface">
-                        <div class="space-y-3">
-                            <span class="font-label-caps text-brand-red text-xs uppercase tracking-widest block">SPESIALISASI PROGRAM</span>
+                        <!-- Top Summary Badge -->
+                        <div class="bg-white/5 border border-white/10 p-4 rounded-xl flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                            <div>
+                                <span class="font-label-caps text-brand-red text-[10px] uppercase tracking-widest block mb-1">PROFIL PERSONAL TRAINER</span>
+                                <h4 class="font-headline-md text-white text-base sm:text-lg uppercase">
+                                    {{ fannyData.tagline }}
+                                </h4>
+                            </div>
                             <div class="flex flex-wrap gap-1.5">
                                 <span v-for="tag in fannyData.specialties" :key="tag" class="px-2.5 py-1 bg-brand-red/10 border border-brand-red/30 text-brand-red text-xs font-semibold rounded-full">
                                     {{ tag }}
@@ -464,37 +472,106 @@
                             </div>
                         </div>
 
-                        <div class="space-y-3">
-                            <h4 class="font-headline-md text-lg text-white uppercase tracking-wider">
-                                TENTANG PROFIL COACH FANNY
-                            </h4>
-                            <div class="p-4 bg-white/5 border border-dashed border-white/20 rounded-xl">
-                                <p class="font-body-md text-sm sm:text-base leading-relaxed text-on-surface-variant italic">
-                                    "Deskripsi profil lengkap sedang dalam proses penyusunan dan akan segera diperbarui."
+                        <!-- 1. ABOUT ME (TENTANG SAYA) -->
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-2 border-b border-white/10 pb-2">
+                                <span class="material-symbols-outlined text-brand-red text-[20px]">person</span>
+                                <h4 class="font-headline-md text-xl text-white uppercase tracking-wider">
+                                    ABOUT ME
+                                </h4>
+                            </div>
+
+                            <!-- Transformation Stat Card -->
+                            <div class="bg-gradient-to-r from-brand-red/15 via-[#1a1515] to-white/5 border border-brand-red/30 p-4 sm:p-5 rounded-xl flex flex-col sm:flex-row sm:items-center justify-between gap-3 shadow-inner">
+                                <div class="flex items-center gap-3.5">
+                                    <div class="w-11 h-11 rounded-full bg-brand-red/20 border border-brand-red/40 flex items-center justify-center text-brand-red shrink-0">
+                                        <span class="material-symbols-outlined text-[22px]">fitness_center</span>
+                                    </div>
+                                    <div>
+                                        <span class="font-label-caps text-brand-red text-[10px] uppercase tracking-widest block">PERJALANAN TRANSFORMASI</span>
+                                        <div class="flex items-center gap-2.5 text-white font-headline-md text-lg sm:text-xl">
+                                            <span class="text-white/50 line-through">53 KG</span>
+                                            <span class="text-brand-red font-bold">&rarr;</span>
+                                            <span class="text-brand-red font-bold">42 KG</span>
+                                            <span class="text-xs text-white/60 font-body-md font-normal px-2 py-0.5 bg-white/10 rounded">TB 148 CM</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="text-xs text-white/80 italic bg-black/40 px-3 py-1.5 rounded-lg border border-white/5 self-start sm:self-center">
+                                    Transformasi Nyata &bull; Disiplin &bull; Gaya Hidup Sehat
+                                </span>
+                            </div>
+
+                            <div class="space-y-3 font-body-md text-sm sm:text-base leading-relaxed text-on-surface-variant">
+                                <p v-for="(par, idx) in fannyData.aboutMe" :key="idx">
+                                    {{ par }}
                                 </p>
                             </div>
-                            <p class="font-body-md text-sm sm:text-base leading-relaxed text-on-surface-variant">
-                                Siap membantu dan mendampingi Anda dalam program latihan beban, pembentukan tubuh, peningkatan kebugaran fisik, serta panduan latihan terarah di WARGYM Mojosongo.
-                            </p>
                         </div>
 
-                        <div class="p-5 bg-white/5 border border-white/10 rounded-xl text-center space-y-3">
-                            <p class="font-headline-md text-sm sm:text-base text-white">
-                                Ingin konsultasi latihan privat bersama Coach Fanny?
-                            </p>
-                            <a 
-                                href="https://wa.me/6289508366293?text=Halo%20Admin%20WARGYM%2C%20saya%20tertarik%20konsultasi%20program%20latihan%20dengan%20Coach%20Fanny."
-                                target="_blank"
-                                class="btn-primary inline-flex items-center gap-2 py-3 px-8 text-xs sm:text-sm tracking-widest rounded-lg"
-                            >
-                                <span class="material-symbols-outlined text-[18px]">chat</span>
-                                HUBUNGI SEKARANG
-                            </a>
+                        <!-- 2. Quote Filosofi -->
+                        <div class="bg-gradient-to-br from-[#1d1414] to-[#121212] border border-brand-red/30 p-5 sm:p-6 rounded-xl space-y-3">
+                            <div class="flex items-center gap-2 text-brand-red">
+                                <span class="material-symbols-outlined text-[22px]">format_quote</span>
+                                <span class="font-label-caps text-xs uppercase tracking-widest text-brand-red font-bold">FILOSOFI SAYA</span>
+                            </div>
+                            <blockquote class="p-3.5 bg-brand-red/10 border-l-4 border-brand-red rounded-r-lg">
+                                <p class="font-headline-md text-base sm:text-lg text-white italic tracking-wide">
+                                    "{{ fannyData.quote }}"
+                                </p>
+                            </blockquote>
                         </div>
+
+                        <!-- 3. Pendekatan Latihan -->
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-2 border-b border-white/10 pb-2">
+                                <span class="material-symbols-outlined text-brand-red text-[20px]">sports_gymnastics</span>
+                                <h4 class="font-headline-md text-lg text-white uppercase tracking-wider">
+                                    PENDEKATAN LATIHAN
+                                </h4>
+                            </div>
+                            <p class="font-body-md text-sm sm:text-base leading-relaxed text-on-surface-variant">
+                                {{ fannyData.desc }}
+                            </p>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-2">
+                                <div v-for="point in fannyData.focusPoints" :key="point" class="flex items-center gap-2.5 p-2.5 bg-white/5 rounded-lg border border-white/5">
+                                    <span class="text-brand-red font-bold">&check;</span>
+                                    <span class="text-xs sm:text-sm text-white/90">{{ point }}</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slogan & CTA Banner -->
+                        <div class="bg-gradient-to-r from-brand-red/20 via-black to-brand-red/20 border border-brand-red/40 p-6 rounded-2xl text-center space-y-3">
+                            <p class="font-headline-md text-base sm:text-lg text-brand-red italic tracking-wider font-semibold">
+                                {{ fannyData.slogan }}
+                            </p>
+                            <h3 class="font-headline-lg text-xl sm:text-2xl text-white uppercase tracking-widest drop-shadow">
+                                MULAI PERJALANAN FITNESSMU
+                            </h3>
+                            <p class="text-xs sm:text-sm text-on-surface-variant max-w-md mx-auto">
+                                Siap mendampingi Anda latihan dengan aman, nyaman, dan terukur di WARGYM Mojosongo.
+                            </p>
+                            <div class="pt-2">
+                                <a 
+                                    href="https://wa.me/6289508366293?text=Halo%20Coach%20Fanny%20WARGYM%2C%20saya%20tertarik%20untuk%20konsultasi%20program%20Women%20Personal%20Trainer."
+                                    target="_blank"
+                                    class="btn-primary inline-flex items-center gap-2 py-3 px-8 text-xs sm:text-sm tracking-widest rounded-lg shadow-lg"
+                                >
+                                    <span class="material-symbols-outlined text-[18px]">chat</span>
+                                    KONSULTASI DENGAN COACH FANNY
+                                </a>
+                            </div>
+                        </div>
+
                     </div>
 
                     <!-- Modal Footer -->
-                    <div class="bg-[#161616]/95 backdrop-blur-md px-6 py-4 border-t border-white/10 flex justify-end">
+                    <div class="sticky bottom-0 z-20 bg-[#161616]/95 backdrop-blur-md px-6 py-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-3">
+                        <span class="text-xs text-on-surface-variant font-label-caps">
+                            WARGYM MOJOSONGO &bull; WOMEN PERSONAL TRAINER
+                        </span>
                         <button 
                             @click="closeModal" 
                             class="px-5 py-2 rounded bg-white/10 hover:bg-white/20 text-white text-xs uppercase font-headline-md tracking-wider transition-colors"
@@ -570,10 +647,27 @@ const ghionData = {
 // Data Coach Fanny
 const fannyData = {
     name: 'FANNY',
-    age: 26,
-    profession: 'Personal Trainer / Fitness Coach',
-    specialties: ['Personal Trainer', 'Fitness Coach', 'Muscle Building', 'Weight Management'],
-    desc: 'Deskripsi profil menyusul. Siap mendampingi dan memandu program latihan kebugaran, kekuatan, dan pembentukan tubuh Anda di WARGYM Mojosongo.'
+    fullName: 'Coach Fanny',
+    role: 'Women Personal Trainer',
+    tagline: 'Beginner Friendly Women Fitness',
+    quote: 'Bagi saya perempuan tidak harus menjadi kurus untuk menjadi sehat dan kuat.',
+    desc: 'Saya membantu perempuan memulai perjalanan fitness/strength training dengan pendekatan yang realistis, mulai dari mengenal gerakan dasar, meningkatkan kekuatan otot, memperbaiki kebugaran, hingga membangun komposisi tubuh yang lebih baik.',
+    previewAboutMe: 'Saya pernah berada di titik ketika berat badan saya 53 kg dengan tinggi badan 148 cm. Kini, berat badan saya berada di angka 42 kg. Perjalanan ini mengajarkan saya bahwa perubahan fisik bukan hanya tentang angka di timbangan, tetapi juga tentang proses mengenal tubuh, membangun disiplin, dan menerapkan gaya hidup yang lebih sehat.',
+    slogan: '#Train for Health, Build for Life',
+    aboutMe: [
+        'Saya pernah berada di titik ketika berat badan saya 53 kg dengan tinggi badan 148 cm. Kini, berat badan saya berada di angka 42 kg.',
+        'Perjalanan ini mengajarkan saya bahwa perubahan fisik bukan hanya tentang angka di timbangan, tetapi juga tentang proses mengenal tubuh, membangun disiplin, dan menerapkan gaya hidup yang lebih sehat.',
+        'Dari pengalaman pribadi tersebut, saya ingin membantu lebih banyak perempuan memulai perjalanan fitness mereka. Saya percaya setiap perempuan memiliki kondisi, kemampuan, dan tujuan yang berbeda. Karena itu, latihan seharusnya tidak menjadi ajang membandingkan diri, melainkan proses untuk menjadi lebih kuat dan sehat.'
+    ],
+    specialties: ['Beginner Friendly', 'Women Fitness', 'Strength Training', 'Body Composition'],
+    focusPoints: [
+        'Mengenal Gerakan Dasar',
+        'Meningkatkan Kekuatan Otot',
+        'Memperbaiki Kebugaran Fisik',
+        'Membangun Komposisi Tubuh Lebih Baik',
+        'Pendekatan Realistis & Bertahap',
+        'Latihan Ramah Pemula & Bebas Intimidasi'
+    ]
 }
 </script>
 
