@@ -294,11 +294,11 @@ const gearItems = [
   { title: 'Area Gym Utama', desc: 'Kawasan Beban & Mesin', image: '/images/preview1.jpeg' },
   { title: 'Area Kardio & Strength', desc: 'Peralatan Lengkap Terpadu', image: '/images/preview2.jpeg' },
   { title: 'Free Weight Zone', desc: 'Dumbbell & Barbell Station', image: '/images/preview3.jpeg' },
-  { title: 'Leg Press + Dips', desc: 'Power Majemuk Kaki', image: '/images/Leg Press + Dips.jpeg' },
-  { title: 'Leg Curl + Leg Extension + Triceps', desc: 'Definisi Otot Kaki & Lengan', image: '/images/Leg Curl + Leg Extension + Triceps.jpeg' },
-  { title: 'Chest Press', desc: 'Dada & Tricep Maksimal', image: '/images/Chest Press.jpeg' },
-  { title: 'Flat Bench Press', desc: 'Compound Chest Press', image: '/images/Flat Bench Press.jpeg' },
-  { title: 'Lat Pulldown', desc: 'Kekuatan Punggung & Sayap', image: '/images/lat pulldown.jpeg' },
+  { title: 'Leg Press + Dips', desc: 'Power Majemuk Kaki', image: '/images/leg-press-dips.jpeg' },
+  { title: 'Leg Curl + Leg Extension + Triceps', desc: 'Definisi Otot Kaki & Lengan', image: '/images/leg-curl-extension-triceps.jpeg' },
+  { title: 'Chest Press', desc: 'Dada & Tricep Maksimal', image: '/images/chest-press.jpeg' },
+  { title: 'Flat Bench Press', desc: 'Compound Chest Press', image: '/images/flat-bench-press.jpeg' },
+  { title: 'Lat Pulldown', desc: 'Kekuatan Punggung & Sayap', image: '/images/lat-pulldown.jpeg' },
 ]
 
 const googleReviews = [
