@@ -291,9 +291,9 @@ onUnmounted(() => {
 })
 
 const gearItems = [
-  { title: 'Treadmill', desc: 'Kardio Performa Tinggi', image: '/images/treadmill.jpeg' },
-  { title: 'Smith Machine', desc: 'Latihan Beban Terpadu', image: '/images/Smith Machine.jpeg' },
-  { title: 'Peck Deck Butterfly', desc: 'Isolasi Otot Dada', image: '/images/Peck Deck Butterfly.jpeg' },
+  { title: 'Area Gym Utama', desc: 'Kawasan Beban & Mesin', image: '/images/preview1.jpeg' },
+  { title: 'Area Kardio & Strength', desc: 'Peralatan Lengkap Terpadu', image: '/images/preview2.jpeg' },
+  { title: 'Free Weight Zone', desc: 'Dumbbell & Barbell Station', image: '/images/preview3.jpeg' },
   { title: 'Leg Press + Dips', desc: 'Power Majemuk Kaki', image: '/images/Leg Press + Dips.jpeg' },
   { title: 'Leg Curl + Leg Extension + Triceps', desc: 'Definisi Otot Kaki & Lengan', image: '/images/Leg Curl + Leg Extension + Triceps.jpeg' },
   { title: 'Chest Press', desc: 'Dada & Tricep Maksimal', image: '/images/Chest Press.jpeg' },
