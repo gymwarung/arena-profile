@@ -11,12 +11,12 @@
         </div>
         <!-- Slide 2 -->
         <div class="absolute inset-0 z-0 transition-opacity duration-1000" :class="currentSlide === 1 ? 'opacity-100' : 'opacity-0'">
-            <img class="w-full h-full object-cover brightness-125" src="/images/carousel2.jpg" />
+            <img class="w-full h-full object-cover brightness-125" src="/images/carousel2.jpeg" />
             <div class="absolute inset-0 hero-vignette"></div>
         </div>
         <!-- Slide 3 -->
         <div class="absolute inset-0 z-0 transition-opacity duration-1000" :class="currentSlide === 2 ? 'opacity-100' : 'opacity-0'">
-            <img class="w-full h-full object-cover brightness-125" src="/images/carousel 3.jpg" />
+            <img class="w-full h-full object-cover brightness-125" src="/images/carousel3.jpeg" />
             <div class="absolute inset-0 hero-vignette"></div>
         </div>
 
@@ -291,14 +291,14 @@ onUnmounted(() => {
 })
 
 const gearItems = [
-  { title: 'Treadmill', desc: 'Kardio Performa Tinggi', image: '/images/preview1.jpg' },
-  { title: 'Smith Machine', desc: 'Latihan Beban Terpadu', image: '/images/preview2.jpg' },
-  { title: 'Pec Deck', desc: 'Isolasi Otot Dada', image: '/images/preview3.jpg' },
-  { title: 'Leg Press', desc: 'Power Majemuk Kaki', image: '/images/preview4.jpg' },
-  { title: 'Leg Extension', desc: 'Definisi Quadriceps', image: '/images/preview5.jpg' },
-  { title: 'Mesin Sit Up', desc: 'Core & Abs Station', image: '/images/preview6.jpg' },
-  { title: 'Twister Core', desc: 'Stabilitas Rotasi', image: '/images/preview7.jpg' },
-  { title: 'Preacher Curl', desc: 'Fokus Bicep Maksimal', image: '/images/preview8.jpg' },
+  { title: 'Treadmill', desc: 'Kardio Performa Tinggi', image: '/images/treadmill.jpeg' },
+  { title: 'Smith Machine', desc: 'Latihan Beban Terpadu', image: '/images/Smith Machine.jpeg' },
+  { title: 'Peck Deck Butterfly', desc: 'Isolasi Otot Dada', image: '/images/Peck Deck Butterfly.jpeg' },
+  { title: 'Leg Press + Dips', desc: 'Power Majemuk Kaki', image: '/images/Leg Press + Dips.jpeg' },
+  { title: 'Leg Curl + Leg Extension + Triceps', desc: 'Definisi Otot Kaki & Lengan', image: '/images/Leg Curl + Leg Extension + Triceps.jpeg' },
+  { title: 'Chest Press', desc: 'Dada & Tricep Maksimal', image: '/images/Chest Press.jpeg' },
+  { title: 'Flat Bench Press', desc: 'Compound Chest Press', image: '/images/Flat Bench Press.jpeg' },
+  { title: 'Lat Pulldown', desc: 'Kekuatan Punggung & Sayap', image: '/images/lat pulldown.jpeg' },
 ]
 
 const googleReviews = [
