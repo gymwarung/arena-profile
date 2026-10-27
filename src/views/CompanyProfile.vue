@@ -119,7 +119,7 @@
                 <div class="h-[1px] flex-grow bg-surface-variant mx-8 hidden md:block"></div>
                 <span class="font-label-caps text-brand-red uppercase tracking-widest border border-brand-red/40 bg-brand-red/10 px-4 py-2 shrink-0">Training Floor</span>
             </div>
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
                 <div v-for="item in gearItems" :key="item.title" class="group relative overflow-hidden aspect-square border border-white/10 bg-white/5 backdrop-blur-md shadow-[0_18px_60px_rgba(0,0,0,.28)]">
                     <img :alt="item.title" class="absolute inset-0 w-full h-full object-cover brightness-125 group-hover:brightness-150 group-hover:scale-110 transition-all duration-700" :src="item.image" loading="lazy"/>
                 </div>
@@ -292,13 +292,11 @@ onUnmounted(() => {
 
 const gearItems = [
   { title: 'Area Gym Utama', desc: 'Kawasan Beban & Mesin', image: '/images/preview1.jpeg' },
-  { title: 'Area Kardio & Strength', desc: 'Peralatan Lengkap Terpadu', image: '/images/preview2.jpeg' },
+  { title: 'Lorong Mesin & Kardio', desc: 'Peralatan Lengkap Terpadu', image: '/images/preview2.jpeg' },
   { title: 'Free Weight Zone', desc: 'Dumbbell & Barbell Station', image: '/images/preview3.jpeg' },
-  { title: 'Leg Press + Dips', desc: 'Power Majemuk Kaki', image: '/images/leg-press-dips.jpeg' },
-  { title: 'Leg Curl + Leg Extension + Triceps', desc: 'Definisi Otot Kaki & Lengan', image: '/images/leg-curl-extension-triceps.jpeg' },
-  { title: 'Chest Press', desc: 'Dada & Tricep Maksimal', image: '/images/chest-press.jpeg' },
-  { title: 'Flat Bench Press', desc: 'Compound Chest Press', image: '/images/flat-bench-press.jpeg' },
-  { title: 'Lat Pulldown', desc: 'Kekuatan Punggung & Sayap', image: '/images/lat-pulldown.jpeg' },
+  { title: 'Fasilitas & Area Parkir', desc: 'Tampak Depan & Parkir Luas', image: '/images/preview4.jpeg' },
+  { title: 'Training Floor Hall', desc: 'Suasana Latihan Luas & Terang', image: '/images/preview5.jpeg' },
+  { title: 'Outdoor & Samsak Area', desc: 'Area Tinju & Tempat Santai', image: '/images/preview6.jpeg' },
 ]
 
 const googleReviews = [

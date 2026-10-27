@@ -96,7 +96,7 @@ const navItems = [
     ]
   },
   { title: 'FASILITAS', url: '/fasilitas', id: 'fasilitas' },
-  { title: 'TEAM KITA', url: '/team', id: 'team' },
+  { title: 'tentang kami', url: '/team', id: 'team' },
   { title: 'KONTAK', url: '/contact', id: 'contact' },
 ]
 

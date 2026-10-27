@@ -17,7 +17,7 @@ const routes = [
     path: '/team',
     name: 'team',
     component: () => import('../views/Team.vue'),
-    meta: { title: 'Team Kita | WARGYM Jombang' }
+    meta: { title: 'tentang kami | WARGYM Jombang' }
   },
   {
     path: '/contact',
