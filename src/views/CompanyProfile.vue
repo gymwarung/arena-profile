@@ -5,7 +5,7 @@
         <!-- Slide 1 -->
         <div class="absolute inset-0 z-0 transition-opacity duration-1000" :class="currentSlide === 0 ? 'opacity-100' : 'opacity-0'">
             <video class="w-full h-full object-cover brightness-125" autoplay loop muted playsinline>
-                <source src="/videos/wargym-carousel.mp4" type="video/mp4">
+                <source src="/videos/wargym.mp4" type="video/mp4">
             </video>
             <div class="absolute inset-0 hero-vignette"></div>
         </div>

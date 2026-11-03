@@ -37,9 +37,14 @@
                             <div class="absolute inset-0 bg-gradient-to-t from-[#131313] via-transparent to-transparent opacity-80"></div>
                         </div>
                         <div class="flex flex-col p-2 sm:p-5 flex-grow justify-between relative z-10 bg-[#131313]/50">
-                            <h3 class="font-headline-md text-[9px] sm:text-lg text-white tracking-wide uppercase line-clamp-2 leading-tight">
-                                {{ facility.name }}
-                            </h3>
+                            <div>
+                                <h3 class="font-headline-md text-[9px] sm:text-lg text-white tracking-wide uppercase line-clamp-2 leading-tight">
+                                    {{ facility.name }}
+                                </h3>
+                                <p v-if="facility.desc" class="font-body-md text-[7px] sm:text-xs text-on-surface-variant line-clamp-1 sm:line-clamp-2 mt-0.5 sm:mt-1 leading-tight sm:leading-snug">
+                                    {{ facility.desc }}
+                                </p>
+                            </div>
                             <div class="flex items-center justify-between mt-auto pt-1 sm:pt-3 border-t border-white/10">
                                 <span class="font-label-caps text-[7px] sm:text-xs text-brand-red font-bold tracking-widest">
                                     {{ facility.qty }}
@@ -74,7 +79,7 @@ const facilities = [
     { name: 'Peck Deck Butterfly', qty: '1 Unit', category: 'strength', img: '/images/peck-deck-butterfly.jpeg' },
     { name: 'Abductor', qty: '1 Unit', category: 'strength', img: '/images/Abductor.jpeg' },
     { name: 'Dumbel', qty: '1-4kg & 2.5-20kg', category: 'strength', img: '/images/dumbel.jpeg' },
-    { name: 'Bumper Plate Untuk Deadlift', qty: '5-20kg', category: 'strength', img: '/images/bumper-plate.jpeg' },
+    { name: 'Bumper Plate Untuk Deadlift', qty: 'Total Beban 100kg', desc: '5kg, 10kg, 15kg, 20kg (masing-masing 2 buah)', category: 'strength', img: '/images/bumper-plate.jpeg' },
     { name: 'Adjustable Bench', qty: '3 Unit', category: 'strength', img: '/images/adjustable.jpeg' },
     { name: 'Alat Sit Up', qty: '1 Unit', category: 'strength', img: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&h=400&fit=crop' },
     { name: 'Tempat Pull Up', qty: '2 Unit', category: 'strength', img: '/images/tempat-pullup.jpeg' },
@@ -87,8 +92,11 @@ const facilities = [
 
 const filteredFacilities = computed(() => {
   return facilities.filter(f => {
+    const q = searchQuery.value.toLowerCase()
     const matchCategory = currentCategory.value === 'all' || f.category === currentCategory.value
-    const matchSearch = f.name.toLowerCase().includes(searchQuery.value.toLowerCase())
+    const matchSearch = f.name.toLowerCase().includes(q) || 
+      (f.desc && f.desc.toLowerCase().includes(q)) || 
+      f.qty.toLowerCase().includes(q)
     return matchCategory && matchSearch
   })
 })
