@@ -77,7 +77,7 @@
                         <!-- Header Name -->
                         <div class="mb-5 pb-5 border-b border-white/10">
                             <h3 class="font-headline-md text-3xl sm:text-4xl text-white uppercase tracking-wider m-0 leading-tight group-hover:text-brand-red transition-colors">
-                                COACH {{ fannyData.name }}
+                                KAK {{ fannyData.name }}
                             </h3>
                         </div>
 
@@ -459,7 +459,7 @@
     </Teleport>
 
     <!-- ========================================== -->
-    <!-- POPUP MODAL: PROFIL COACH FANNY            -->
+    <!-- POPUP MODAL: PROFIL KAK FANNY              -->
     <!-- ========================================== -->
     <Teleport to="body">
         <Transition name="modal-fade">
@@ -475,7 +475,7 @@
                         <div>
                             <div class="flex items-center gap-2">
                                 <h3 class="font-headline-md text-xl sm:text-2xl text-white uppercase tracking-wider m-0">
-                                    COACH {{ fannyData.name }}
+                                    KAK {{ fannyData.name }}
                                 </h3>
                                 <span class="px-2 py-0.5 bg-brand-red text-black text-[10px] font-bold rounded uppercase">
                                     WOMEN TRAINER
@@ -595,12 +595,12 @@
                             </p>
                             <div class="pt-2">
                                 <a 
-                                    href="https://wa.me/6289508366293?text=Halo%20Coach%20Fanny%20WARGYM%2C%20saya%20tertarik%20untuk%20konsultasi%20program%20Women%20Personal%20Trainer."
+                                    href="https://wa.me/6289508366293?text=Halo%20Kak%20Fanny%20WARGYM%2C%20saya%20tertarik%20untuk%20konsultasi%20program%20Women%20Personal%20Trainer."
                                     target="_blank"
                                     class="btn-primary inline-flex items-center gap-2 py-3 px-8 text-xs sm:text-sm tracking-widest rounded-lg shadow-lg"
                                 >
                                     <span class="material-symbols-outlined text-[18px]">chat</span>
-                                    KONSULTASI DENGAN COACH FANNY
+                                    KONSULTASI DENGAN KAK FANNY
                                 </a>
                             </div>
                         </div>
@@ -870,10 +870,10 @@ const ghionData = {
     ]
 }
 
-// Data Coach Fanny
+// Data Kak Fanny
 const fannyData = {
     name: 'FANNY',
-    fullName: 'Coach Fanny',
+    fullName: 'Kak Fanny',
     role: 'Women Personal Trainer',
     tagline: 'Beginner Friendly Women Fitness',
     quote: 'Bagi saya perempuan tidak harus menjadi kurus untuk menjadi sehat dan kuat.',

@@ -101,7 +101,7 @@ Model ini mengelola seluruh informasi profil pelatih kebugaran yang ditampilkan 
 ```typescript
 interface PersonalTrainer {
   name: string;               // Nama panggilan (misal: "GHION", "FANNY", "IZAA")
-  fullName: string;           // Nama lengkap / title resmi (misal: "Coach Fanny", "Kak Izaa")
+  fullName: string;           // Nama lengkap / title resmi (misal: "Kak Fanny", "Kak Izaa")
   age?: number;               // Usia (opsional)
   profession: string;         // Jabatan profesional (misal: "Personal Trainer / Fitness Coach")
   role?: string;              // Peran spesifik (misal: "Women Personal Trainer")
@@ -365,7 +365,7 @@ Berikut adalah catatan historis perubahan repositori resmi yang tercatat di caba
 | **13** | `e662abc` | 2026-10-05 11:50:14 | `musyafak-a` | **Buat kedua card personal trainer (Ghion & Fanny) text-only tanpa foto** | Standardisasi tampilan kartu pelatih berbasis tipografi kuat (*text-only aesthetic*) berlatar belakang kaca (*glass-panel*) agar tampilan seimbang tanpa foto placeholder. |
 | **12** | `ff649a8` | 2026-10-05 11:33:42 | `musyafak-a` | **Update card trainer Dika menjadi Fanny dengan deskripsi menyusul** | Pergantian data trainer dari Dika ke Coach Fanny pada struktur data trainer. |
 | **11** | `c0411d6` | 2026-10-05 11:25:27 | `musyafak-a` | **Update card Ghion dengan preview dan popup modal profil lengkap** | Implementasi modal interaktif untuk Coach Ghion yang memuat perjalanan mengatasi autoimun, spesialisasi kebugaran longevity, prinsip latihan, dan visi kepelatihan. |
-| **10** | `330cc05` | 2026-10-05 10:36:12 | `musyafak-a` | **Update gambar card fasilitas** | Integrasi gambar lokal fasilitas pendukung: Musholla (`musholla.png`), Warung Kopi (`warung.jpg`), Samsak Tinju (`samsak.png`), dan Kipas Angin (`kipas.png`). |
+| **10** | `330cc05` | 2026-10-05 10:36:12 | `musyafak-a` | **Update gambar card fasilitas** | Integrasi gambar lokal fasilitas pendukung: Musholla (`musholla.jpeg`), Warung Kopi (`warung.jpg`), Samsak Tinju (`samsak.png`), dan Kipas Angin (`kipas.png`). |
 | **9** | `5994a9b` | 2026-10-05 10:17:50 | `musyafak-a` | **Sesuaikan dan tambahkan fasilitas baru** | Pemutakhiran daftar inventaris alat: Abductor + Adductor (1 unit), Kamar Mandi/Toilet, Musholla, Free Wi-Fi, dan Sirkulasi Udara Kipas Angin. |
 | **8** | `44605a3` | 2026-10-05 10:03:52 | `musyafak-a` | **Update deskripsi Cerita Kami dengan profil lengkap WARGYM Mojosongo** | Penulisan narasi otentik pada halaman `Team.vue` tentang asal-usul nama WARGYM (Warung Gym), visi kebersamaan, dan prinsip *sehat tidak harus mahal*. |
 | **7** | `abc9d2c` | 2026-10-05 09:57:21 | `musyafak-a` | **Update halaman PT: sisakan 2 card** | Restrukturisasi awal halaman Personal Trainer untuk fokus pada 2 pelatih utama. |
