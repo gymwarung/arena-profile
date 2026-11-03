@@ -317,12 +317,12 @@ const googleReviews = [
     link: 'https://maps.app.goo.gl/VnvJkbAYRgqnrp2BA',
   },
   {
-    name: 'ghiona ghionaw',
-    role: '1 ulasan',
+    name: 'Miftaqul Qoiroh',
+    role: '3 ulasan · 4 foto',
     rating: 5,
-    time: '4 bulan lalu',
-    text: 'Tempat sangat nyaman, komunitas nya friendly banget, cocok buat pemula dan kantong pelajar, harganya murah meriah. cuma 5k per kedatangan. 60k per bulan. josjis pokoknya. gaspol ndangak!',
-    link: 'https://maps.app.goo.gl/9GGB3eGPq5Q5PAi6A',
+    time: 'Sebulan lalu',
+    text: 'Harga terjangkau , area gymnya juga bersih, alat alatnya juga lengkap. Ada PT harian juga , PT cewek ataupun cowok, ramah & sangat membantu sekali bagi pemula sepertiku. Tempat gym yang pas banget buat yang baru mau memulai gaya hidup sehat 😍',
+    link: 'https://share.google/nfAPujHaMuS3p0OUe',
   },
   {
     name: 'Muhammad Rofiqi',

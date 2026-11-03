@@ -98,7 +98,7 @@
                     <div class="mt-auto">
                         <div class="flex items-baseline gap-1 mb-6">
                             <span class="font-body-md text-brand-red text-sm font-bold">Rp</span>
-                            <span class="font-display-xl text-4xl text-white">5.000</span>
+                            <span class="font-display-xl text-4xl text-white">10.000</span>
                             <span class="font-body-md text-on-surface-variant text-sm">/hari</span>
                         </div>
                         <router-link to="/contact" class="btn-secondary w-full text-center text-sm py-3">DAFTAR SEKARANG</router-link>
@@ -159,7 +159,7 @@
                     <div class="mt-auto">
                         <div class="flex items-baseline gap-1 mb-6">
                             <span class="font-body-md text-brand-red text-sm font-bold">Rp</span>
-                            <span class="font-display-xl text-4xl text-white">70.000</span>
+                            <span class="font-display-xl text-4xl text-white">80.000</span>
                             <span class="font-body-md text-on-surface-variant text-sm">/bln</span>
                         </div>
                         <router-link to="/contact" class="btn-secondary w-full text-center text-sm py-3">Daftar Sekarang</router-link>
